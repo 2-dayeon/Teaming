@@ -1,5 +1,5 @@
-function goToLogin() {
-    window.location.href = "/login.html";
+function goToSignup() {
+    window.location.href = "../Sign Up - ID/signup-id.html";
 }
 
 function goToLogup() {
