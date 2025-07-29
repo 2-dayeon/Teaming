@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Teaming - 로그인</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="Group 14 copy 2.png" alt="Teaming Icon" class="nav-logo">
+            <span class="nav-title">Teaming</span>
+        </div>
+        <div class="nav-right">
+            <nav class="nav-links">
+                <a href="#">홈</a>
+                <span>|</span>
+                <a href="#">프로젝트</a>
+                <span>|</span>
+                <a href="#">학생 프로필</a>
+            </nav>
+            <a href="#" class="login-btn">로그인</a>
+        </div>
+    </header>
+
+    <div class="container">
+    <form class="signin-form" onsubmit="return handleSignup(event)">
+        <h2><img src="Group 14 copy 2.png" alt="logo" class="form-logo">Teaming</h2>
+
+        <label for="username">ID</label>
+        <input type="text" id="username" placeholder="아이디 입력" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="비밀번호 입력" required>
+
+        <button type="submit" class="signin-btn">로그인</button>
+        <hr style="background: rgb(218, 217, 217); height: 1px; border: none;">
+        <a href="../SignUp/signup.html" class="logup-link">아직 계정이 없으신가요? 회원가입</a>
+    </form>
+    </div>
+
+    <script src="signin.js"></script>
+</body>
+</html>
