@@ -85,16 +85,16 @@ a {
 }
 
 .hero h1 {
-    font-size: 32px;
+    font-size: 35px;
     font-weight: 700;
     margin-bottom: 12px;
     margin-top: 70px;
 }
 
 .hero p {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 24px;
-    color: #555;
+    color: #727272;
 }
 
 .hero-buttons {
@@ -107,21 +107,23 @@ a {
     background-color: #5FBCFF;
     color: white;
     border: 0.2px solid #b2b2b2;
-    padding: 12px 24px;
+    padding: 14px 50px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 15px;
 
 }
 
 .hero-buttons .white {
     border: 0.2px solid #b2b2b2;
     background-color: white;
-    color: #2166f2;
-    padding: 12px 24px;
+    color: #000000;
+    padding: 14px 50px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 15px;
 }
 
   /* 프로젝트 섹션 */
@@ -168,10 +170,16 @@ a {
     background-color: #eee;
     color: #888;
 }
-.tags, .stacks {
-    margin-top: 8px;
+
+.tags span {
+    display: inline-block;
+    font-size: 12px;
+    color: rgb(129, 129, 129);
+    padding: 0px 8px 8px 2px;
+    border-radius: 8px;
 }
-.tags span, .stacks span {
+
+.stacks span {
     display: inline-block;
     font-size: 12px;
     margin: 4px 4px 0 0;
@@ -180,15 +188,18 @@ a {
     padding: 4px 8px;
     border-radius: 8px;
 }
+
 .progress {
     margin-top: 12px;
     font-size: 14px;
 }
+
 .description {
     font-size: 13px;
     color: #555;
     margin-top: 8px;
 }
+
 .more-link {
     display: block;
     margin-top: 10px;
@@ -207,7 +218,7 @@ a {
 
   /* 두 번째 섹션 */
 .section-2 {
-    padding: 80px 48px;
+    padding: 40px 80px;
     background-color: #f4f6fa;
 }
 .section-2 h2 {
