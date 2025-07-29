@@ -8,20 +8,22 @@
 </head>
 <body>
 
-<!-- 첫 번째 화면 -->
 <section class="section section-1">
     <header class="navbar">
-        <div class="logo">
-            <img src="Group 14 copy.png" alt="logo" class="logo-img"/>
-            Teaming
+        <div class="nav-left">
+            <img src="Group 14 copy.png" alt="Teaming Icon" class="nav-logo">
+            <span class="nav-title">Teaming</span>
         </div>
-        <nav class="nav-links">
-            <a href="#">홈</a>
-            <a>|</a>
-            <a href="#">프로젝트</a>
-            <a>|</a>
-            <a href="#">학생 프로필</a>
-        </nav>
+        <div class="nav-right">
+            <nav class="nav-links">
+                <a href="#">홈</a>
+                <span>|</span>
+                <a href="#">프로젝트</a>
+                <span>|</span>
+                <a href="#">학생 프로필</a>
+            </nav>
+            <a href="#" class="login-btn">로그인</a>
+        </div>
     </header>
 
     <div class="hero">
@@ -38,7 +40,6 @@
     <section class="project-section">
         <h2>추천 프로젝트</h2>
         <div class="project-cards">
-        <!-- 프로젝트 카드 1 -->
         <div class="card">
             <div class="card-header">
             <h3>웹 기반 학습 관리 시스템</h3>
@@ -57,7 +58,6 @@
             <a href="#" class="more-link">자세히 보기 →</a>
         </div>
 
-        <!-- 프로젝트 카드 2 -->
         <div class="card">
             <div class="card-header">
             <h3>모바일 운동 트래킹 앱</h3>
@@ -76,7 +76,6 @@
             <a href="#" class="more-link">자세히 보기 →</a>
         </div>
 
-        <!-- 프로젝트 카드 3 -->
         <div class="card">
             <div class="card-header">
             <h3>AI 기반 챗봇 서비스</h3>
@@ -94,44 +93,94 @@
             </div>
             <a href="#" class="more-link">자세히 보기 →</a>
         </div>
+
+        <div class="card">
+            <div class="card-header">
+            <h3>스마트 홈 IoT 시스템</h3>
+            <span class="badge green">모집중</span>
+            </div>
+            <div class="tags">
+            <span># IoT</span><span># 임베디드</span><span># 하드웨어</span>
+            </div>
+            <div class="stacks">
+            <span>Arduino</span><span>Python</span><span>Raspberry Pi</span>
+            </div>
+            <p class="progress">모집 현황 <strong>1 / 3명</strong></p>
+            <div class="description">
+            가정 내 기기들을 제어하고 모니터링하는 스마트 홈 IoT 시스템을 개발합니다...
+            </div>
+            <a href="#" class="more-link">자세히 보기 →</a>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+            <h3>빅데이터 분석 플랫폼</h3>
+            <span class="badge green">모집중</span>
+            </div>
+            <div class="tags">
+            <span># 빅데이터</span><span># 통계</span><span># 클라우드</span>
+            </div>
+            <div class="stacks">
+            <span>Spark</span><span>Hadoop</span><span>AWS</span>
+            </div>
+            <p class="progress">모집 현황 <strong>2 / 6명</strong></p>
+            <div class="description">
+            대규모 데이터를 수집, 저장, 분석하여 의미 있는 인사이트를 도출하는 플랫폼...
+            </div>
+            <a href="#" class="more-link">자세히 보기 →</a>
+        </div>
         </div>
     </section>
 
     </section>
 
-    <!-- 두 번째 화면 -->
     <section class="section section-2">
     <h2>추천 학생</h2>
     <div class="profiles">
-        <!-- 프로필 카드 1 -->
         <div class="profile-card">
         <h3>김철수 <small>2학년 3반 15번</small></h3>
         <div class="stacks">
             <span>Python</span><span>JavaScript</span><span>Java</span>
             </div>
         <p class="intro">백엔드 개발에 관심이 많은 학생입니다. Python과 Django를 주로 사용하며...</p>
-        <a href="#">프로필 보기 →</a>
+        <a href="#" class="more-link">프로필 보기 →</a>
         </div>
 
-        <!-- 프로필 카드 2 -->
         <div class="profile-card">
         <h3>박민지 <small>3학년 1반 8번</small></h3>
         <div class="stacks">
             <span>React</span><span>TypeScript</span><span>CSS</span>
             </div>
         <p class="intro">프론트엔드 개발에 특화된 전문가입니다. 사용자 경험을 중시하며...</p>
-        <a href="#">프로필 보기 →</a>
+        <a href="#" class="more-link">프로필 보기 →</a>
         </div>
 
-        <!-- 프로필 카드 3 -->
         <div class="profile-card">
         <h3>이준호 <small>2학년 5반 22번</small></h3>
         <div class="stacks">
             <span>Flutter</span><span>Dart</span><span>Firebase</span>
             </div>
         <p class="intro">모바일 앱 개발에 특화된 학생입니다. 크로스 플랫폼 앱 개발과...</p>
-        <a href="#">프로필 보기 →</a>
+        <a href="#" class="more-link">프로필 보기 →</a>
         </div>
+
+        <div class="profile-card">
+            <h3>최유리 <small>1학년 2반 7번</small></h3>
+            <div class="stacks">
+                <span>C++</span><span>Algorithm</span><span>Data Structure</span>
+                </div>
+            <p class="intro">알고리즘 문제 해결에 흥미가 많습니다. 효율적인 코드 작성에 능숙하며...</p>
+            <a href="#" class="more-link">프로필 보기 →</a>
+            </div>
+
+        <div class="profile-card">
+            <h3>정민서 <small>4학년 4반 10번</small></h3>
+            <div class="stacks">
+                <span>UI/UX</span><span>Figma</span><span>Sketch</span>
+                </div>
+            <p class="intro">사용자 경험 디자인에 열정을 가지고 있습니다. Figma를 이용한 프로토타이핑...</p>
+            <a href="#" class="more-link">프로필 보기 →</a>
+            </div>
     </div>
     </section>
 

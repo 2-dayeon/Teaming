@@ -1,10 +1,10 @@
-* {
+body {
+    font-family: 'Pretendard', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f6f7f9;
 }
 
-/* 네비게이션 바 */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,36 +14,68 @@
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 }
-.logo {
+
+.nav-left {
     display: flex;
-    align-items: center; 
-    font-size: 24px;
-    font-weight: 800;
+    align-items: center;
 }
-.logo-img {
-    width: 45px;
-    height: 35px;
-    margin-right: 8px;
+
+.nav-logo {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
 }
 
 .nav-links a {
-    margin-right: 24px;
+    margin: 0 12px;
     font-weight: 500;
-}
-
-body {
-    font-family: "Apple SD Gothic Neo", sans-serif;
-    line-height: 1.5;
-    background-color: #f8f9fb;
-    color: #1e1e1e;
-}
-
-a {
+    color: black;
     text-decoration: none;
-    color: #1e1e1e;
+    transition: color 0.2s ease;
 }
+
+.nav-links a:hover {
+    color: #2166f2;
+}
+
+.nav-links span {
+    color: #ccc;
+}
+
+.login-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
 
 .hero {
     position: relative;
@@ -59,7 +91,7 @@ a {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('teaming\ 이미ㅣㅈ.jpg');
+    background-image: url('teaming 이미ㅣㅈ.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.2; 
@@ -112,7 +144,12 @@ a {
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
+    transition: background-color 0.3s ease;
 
+}
+
+.hero-buttons .blue:hover {
+    background-color: #1a90ff; 
 }
 
 .hero-buttons .white {
@@ -124,13 +161,19 @@ a {
     font-weight: bold;
     cursor: pointer;
     font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-buttons .white:hover {
+    background-color: #cfcfcf;
+    border-color: #aaa;      
 }
 
   /* 프로젝트 섹션 */
 .project-section {
     margin: 50px 80px;
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 .project-section h2 {
     font-size: 20px;
@@ -138,17 +181,34 @@ a {
 }
 .project-cards {
     display: flex;
+    /* 추가: 가로 스크롤을 위해 */
+    overflow-x: auto;
+    white-space: nowrap; /* 카드들이 한 줄에 유지되도록 */
     gap: 16px;
-    flex-wrap: wrap;
     font-size: 12px;
+    padding-bottom: 10px; /* 스크롤바가 콘텐츠를 가리지 않도록 여백 추가 */
+    scroll-snap-type: x mandatory; /* 스크롤 스냅 기능 활성화 */
+    -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */
 }
+
+/* 스크롤바 숨기기 (선택 사항, 디자인에 따라) */
+.project-cards::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.project-cards {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
 .card {
     background-color: white;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    width: 100%;
-    max-width: 360px;
+    min-width: 328px; /* 카드의 최소 너비 고정 */
+    scroll-snap-align: start; /* 스크롤 스냅 위치 설정 */
+    flex-shrink: 0; /* 카드 크기가 줄어들지 않도록 */
 }
 .card-header {
     display: flex;
@@ -206,6 +266,13 @@ a {
     margin-top: 10px;
     font-weight: bold;
     color: #2166f2;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.more-link:hover {
+    color: #154dc2;
+    text-decoration: underline;
 }
 
   /* 아래로 스크롤 버튼 */
@@ -219,8 +286,9 @@ a {
 
   /* 두 번째 섹션 */
 .section-2 {
-    padding: 40px 80px;
-    background-color: #f4f6fa;
+    max-width: 1400px;
+    width: 90%;
+    margin: 50px 80px;
 }
 .section-2 h2 {
     font-size: 20px;
@@ -228,16 +296,33 @@ a {
 }
 .profiles {
     display: flex;
-    flex-wrap: wrap;
+    /* 추가: 가로 스크롤을 위해 */
+    overflow-x: auto;
+    white-space: nowrap; /* 카드들이 한 줄에 유지되도록 */
     gap: 16px;
+    padding-bottom: 10px; /* 스크롤바가 콘텐츠를 가리지 않도록 여백 추가 */
+    scroll-snap-type: x mandatory; /* 스크롤 스냅 기능 활성화 */
+    -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤 */
 }
+
+/* 스크롤바 숨기기 (선택 사항, 디자인에 따라) */
+.profiles::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.profiles {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
 .profile-card {
     background-color: white;
     padding: 20px;
     border-radius: 12px;
-    width: 100%;
-    max-width: 360px;
+    min-width: 328px; /* 카드의 최소 너비 고정 */
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    scroll-snap-align: start; /* 스크롤 스냅 위치 설정 */
+    flex-shrink: 0; /* 카드 크기가 줄어들지 않도록 */
 }
 .profile-card h3 {
     font-size: 18px;
@@ -259,7 +344,7 @@ a {
 .profile-card .intro {
     font-size: 13px;
     color: #555;
-    margin-top: 8px;
+    margin-top: 14px;
 }
 .profile-card a {
     display: block;
