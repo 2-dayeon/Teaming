@@ -1,18 +1,7 @@
-/* 기본 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
-    font-family: "Apple SD Gothic Neo", sans-serif;
-    line-height: 1.5;
-    background-color: #f8f9fb;
-    color: #1e1e1e;
-}
-a {
-    text-decoration: none;
-    color: #1e1e1e;
 }
 
 /* 네비게이션 바 */
@@ -20,68 +9,113 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 48px;
+    padding: 20px 40px;
     background-color: white;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1;
 }
 .logo {
-    font-size: 30px;
+    display: flex;
+    align-items: center; 
+    font-size: 24px;
     font-weight: 800;
-    margin-top: 10px;
-    color: #2166f2;
 }
 .logo-img {
-    width: 50px;
-    height: 38px;
+    width: 45px;
+    height: 35px;
+    margin-right: 8px;
 }
+
 .nav-links a {
     margin-right: 24px;
     font-weight: 500;
 }
-.logout-btn {
-    background-color: #f44;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
+
+body {
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    line-height: 1.5;
+    background-color: #f8f9fb;
+    color: #1e1e1e;
 }
 
-  /* Hero */
-.hero {
-    text-align: center;
-    margin-top: 80px;
+a {
+    text-decoration: none;
+    color: #1e1e1e;
 }
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('teaming\ 이미ㅣㅈ.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+    z-index: 1;
+    background-position: top;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+    color: #000;
+}
+
+.hero-overlay {
+    position: relative;
+    text-align: center;
+    color: #000;
+    padding: 40px 20px;
+    border-radius: 12px;
+    z-index: 2;       
+}
+
 .hero h1 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 12px;
+    margin-top: 70px;
 }
+
 .hero p {
     font-size: 16px;
     margin-bottom: 24px;
     color: #555;
 }
+
 .hero-buttons {
     display: flex;
+    gap: 16px;
     justify-content: center;
-    gap: 12px;
 }
+
 .hero-buttons .blue {
-    background-color: #2166f2;
+    background-color: #5FBCFF;
     color: white;
-    border: none;
+    border: 0.2px solid #b2b2b2;
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+
 }
+
 .hero-buttons .white {
-    border: 2px solid #2166f2;
+    border: 0.2px solid #b2b2b2;
     background-color: white;
     color: #2166f2;
     padding: 12px 24px;
@@ -92,7 +126,7 @@ a {
 
   /* 프로젝트 섹션 */
 .project-section {
-    margin: 80px auto;
+    margin: 50px 80px;
     width: 90%;
     max-width: 1200px;
 }
