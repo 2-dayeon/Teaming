@@ -17,6 +17,7 @@ body {
     z-index: 10;
     height: 70px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .nav-left {
@@ -62,7 +63,6 @@ body {
 .nav-links span {
     color: #ccc;
 }
-
 
 .user-icon-link {
     display: flex;
@@ -153,45 +153,49 @@ body {
     justify-content: center;
 }
 
-.hero-buttons .blue {
+/* 새로운 button-link 클래스에 공통 스타일 적용 */
+.button-link {
+    display: inline-block; /* a 태그를 블록 요소처럼 다루어 패딩, 마진 적용 */
+    padding: 14px 50px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none; /* a 태그의 기본 밑줄 제거 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-buttons .blue.button-link {
     background-color: #5FBCFF;
     color: white;
     border: 0.2px solid #b2b2b2;
-    padding: 14px 50px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-
 }
 
-.hero-buttons .blue:hover {
+.hero-buttons .blue.button-link:hover {
     background-color: #1a90ff; 
+    border-color: #1a90ff; /* 호버 시 테두리 색상도 변경 (선택 사항) */
 }
 
-.hero-buttons .white {
+.hero-buttons .white.button-link {
     border: 0.2px solid #b2b2b2;
     background-color: white;
     color: #000000;
-    padding: 14px 50px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
 }
 
-.hero-buttons .white:hover {
+.hero-buttons .white.button-link:hover {
     background-color: #cfcfcf;
     border-color: #aaa;      
+    color: #000000; /* 호버 시 글자색 유지 또는 변경 */
 }
 
-  /* 프로젝트 섹션 */
+/* 프로젝트 섹션 */
 .project-section {
     margin: 50px 80px;
-    width: 90%;
+    width: calc(100% - 160px); /* 좌우 마진 80px 고려 */
     max-width: 1400px;
+    margin-left: auto; /* 중앙 정렬 */
+    margin-right: auto;
 }
 .project-section h2 {
     font-size: 20px;
@@ -207,16 +211,6 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
-
-/* 스크롤바 숨기기 */
-/* .project-cards::-webkit-scrollbar {
-    display: none;
-}
-.project-cards {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-} */
-
 
 .card {
     background-color: white;
@@ -293,20 +287,20 @@ body {
     text-decoration: underline;
 }
 
-  /* 아래로 스크롤 버튼 */
-.scroll-down {
+/* 아래로 스크롤 버튼 (현재 HTML에 없음, 주석 처리) */
+/* .scroll-down {
     margin-top: 60px;
     text-align: center;
     font-size: 24px;
     cursor: pointer;
     color: #2166f2;
-}
+} */
 
-  /* 두 번째 섹션 */
+/* 두 번째 섹션 */
 .section-2 {
     max-width: 1400px;
-    width: 90%;
-    margin: 50px 80px;
+    width: calc(100% - 160px); /* 좌우 마진 80px 고려 */
+    margin: 50px auto; /* 중앙 정렬 */
 }
 .section-2 h2 {
     font-size: 20px;
@@ -321,16 +315,6 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
-
-/* 스크롤바 숨기기 */
-/* .profiles::-webkit-scrollbar {
-    display: none;
-}
-.profiles {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-} */
-
 
 .profile-card {
     background-color: white;

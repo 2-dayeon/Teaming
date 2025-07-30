@@ -176,7 +176,7 @@ body {
     margin-right: auto;
 }
 
-.filter-btn {
+a.filter-btn {
     background-color: white;
     color: #555;
     border: 1px solid #ddd;
@@ -185,27 +185,76 @@ body {
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none; 
+    display: inline-block; 
+    text-align: center; 
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.filter-btn:hover {
+a.filter-btn:hover {
     background-color: #e6f2ff;
     border-color: #007bff;
     color: #007bff;
 }
 
-.filter-btn.active {
+a.filter-btn.active {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
 }
 
-.filter-btn.active:hover {
+a.filter-btn.active:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
 
-.add-project-btn {
+/* filter-design (디자인) 버튼 활성화 스타일 */
+a.filter-design.active {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 글자 */
+    border-color: #007bff; /* 파란색 테두리 */
+}
+a.filter-design.active:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* filter-development (개발) 버튼 활성화 스타일 */
+a.filter-development.active {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 글자 */
+    border-color: #007bff; /* 파란색 테두리 */
+}
+a.filter-development.active:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* filter-planning (기획) 버튼 활성화 스타일 */
+a.filter-planning.active {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 글자 */
+    border-color: #007bff; /* 파란색 테두리 */
+}
+a.filter-planning.active:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* filter-ai (AI) 버튼 활성화 스타일 */
+a.filter-ai.active {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 글자 */
+    border-color: #007bff; /* 파란색 테두리 */
+}
+a.filter-ai.active:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+/* 모집 시작하기 버튼을 a 태그로 변경하고 add-project-link 클래스 적용 */
+a.add-project-link {
     background-color: #007bff;
     color: white;
     border: none;
@@ -214,11 +263,14 @@ body {
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block; /* 패딩, 너비 적용을 위해 */
+    text-align: center; /* 텍스트 중앙 정렬 */
     transition: background-color 0.2s ease;
     margin-left: auto;
 }
 
-.add-project-btn:hover {
+a.add-project-link:hover {
     background-color: #0056b3;
 }
 
@@ -354,7 +406,8 @@ body {
         justify-content: flex-start;
     }
 
-    .add-project-btn {
+    /* add-project-link도 모바일에서 100% 너비 */
+    a.add-project-link {
         width: 100%;
         margin-left: 0;
     }

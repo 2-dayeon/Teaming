@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Project</title>
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="pro-D.css">
 </head>
 <body>
 
 <section class="section section-1">
     <header class="navbar">
         <div class="nav-left">
-            <img src="Group 14 copy 2.png" alt="Teaming Icon" class="nav-logo">
+            <img src="Group 14 copy 3.png" alt="Teaming Icon" class="nav-logo">
             <span class="nav-title">Teaming</span>
         </div>
         <div class="nav-right">
@@ -23,7 +23,7 @@
                 <a href="#">학생 프로필</a>
             </nav>
             <a href="../SignIn/signin.html" class="user-icon-link">
-                <img src="user copy.svg" alt="사용자 아이콘" class="user-icon">
+                <img src="user copy 2.svg" alt="사용자 아이콘" class="user-icon">
             </a>
         </div>
     </header>
@@ -34,18 +34,18 @@
 
         <div class="search-bar-container full-width-search">
             <input type="text" class="search-input" placeholder="프로젝트 검색하기">
-            <img src="search.png" alt="검색 아이콘" class="input-search-icon">
+            <img src="search copy.png" alt="검색 아이콘" class="input-search-icon">
         </div>
 
         <div class="filter-and-add-buttons-row">
             <div class="filter-buttons">
-                <button class="filter-btn active">전체</button>
-                <button class="filter-btn">디자인</button>
-                <button class="filter-btn">개발</button>
-                <button class="filter-btn">기획</button>
-                <button class="filter-btn">AI</button>
+                <a href="../project.html" class="filter-btn filter-all">전체</a>
+                <a href="?filter=design" class="filter-btn filter-design active">디자인</a>
+                <a href="?filter=development" class="filter-btn filter-development">개발</a>
+                <a href="?filter=planning" class="filter-btn filter-planning">기획</a>
+                <a href="?filter=ai" class="filter-btn filter-ai">AI</a>
             </div>
-            <button class="add-project-btn">+ 모집 시작하기</button>
+            <a href="start-recruitment.html" class="add-project-link">+ 모집 시작하기</a>
         </div>
     </div>
 
@@ -220,6 +220,6 @@
 
 </section>
 
-<script src="project.js"></script>
+<script src="pro-D.js"></script>
 </body>
 </html>
