@@ -1,0 +1,412 @@
+/* project.css */
+
+/* 기본 설정 */
+body {
+    font-family: 'Pretendard', sans-serif; /* 폰트 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    background-color: #f6f7f9; /* 배경색 설정 */
+}
+
+/* 네비게이션 바 */
+.navbar {
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 20px 40px; /* 상하 20px, 좌우 40px 패딩 */
+    background-color: white; /* 배경색 흰색 */
+    border-bottom: 1px solid #ddd; /* 하단 테두리 */
+    position: sticky; /* 스크롤 시 상단 고정 */
+    top: 0; /* 상단에 붙임 */
+    z-index: 10; /* 다른 요소 위에 표시 */
+    height: 70px; /* 높이 고정 */
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+    width: 100%; /* 너비 100% */
+}
+
+.nav-left {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-left: -10px; /* 로고/텍스트를 왼쪽으로 더 이동 (디자인 조정) */
+}
+
+.nav-logo {
+    height: 30px; /* 로고 높이 */
+    margin-right: 10px; /* 로고와 타이틀 사이 간격 */
+}
+
+.nav-title {
+    font-size: 22px; /* 타이틀 폰트 크기 */
+    font-weight: 700; /* 타이틀 폰트 굵기 */
+}
+
+.nav-right {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100%; /* 높이 100% */
+}
+
+.nav-links {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-right: 16px; /* 링크 그룹과 아이콘 사이 간격 */
+    height: 100%; /* 높이 100% */
+}
+
+.nav-links a {
+    margin: 0 12px; /* 링크 좌우 간격 */
+    font-weight: 500; /* 폰트 굵기 */
+    color: black; /* 글자색 검정 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.2s ease; /* 호버 시 색상 변화 애니메이션 */
+}
+
+.nav-links a:hover {
+    color: #2166f2; /* 호버 시 파란색으로 변경 */
+}
+
+.nav-links span {
+    color: #ccc; /* 구분선 색상 */
+}
+
+.user-icon-link {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    margin-left: 10px; /* 왼쪽 간격 */
+    height: 28px; /* 높이 */
+    width: 40px; /* 너비 */
+    border: 1px solid #000000; /* 검은색 테두리 */
+    border-radius: 6px; /* 모서리 둥글게 */
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+    background-color: white; /* 배경색 흰색 */
+    transition: background-color 0.3s, border-color 0.3s; /* 호버 시 애니메이션 */
+}
+
+.user-icon-link:hover {
+    background-color: #007bff; /* 호버 시 파란색 배경 */
+    border-color: #007bff; /* 호버 시 파란색 테두리 */
+}
+
+.user-icon {
+    height: 20px; /* 아이콘 높이 */
+    width: 20px; /* 아이콘 너비 */
+    object-fit: contain; /* 이미지 비율 유지 */
+    cursor: pointer; /* 마우스 오버 시 포인터 변경 */
+    transition: filter 0.3s ease; /* 호버 시 필터 애니메이션 */
+}
+
+.user-icon-link:hover .user-icon {
+    filter: brightness(0) invert(1); /* 호버 시 아이콘 색상 반전 (흰색) */
+}
+
+/* 검색 섹션 */
+.search-section {
+    padding: 30px 0 0 0; /* 좌우 패딩을 0으로 설정 */
+    max-width: 1400px; /* 최대 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 유지 */
+    box-sizing: border-box;
+}
+
+.search-section h1 {
+    font-size: 24px; /* 제목 폰트 크기 */
+    font-weight: 700; /* 제목 폰트 굵기 */
+    margin-bottom: 20px; /* 아래 간격 */
+    color: #333; /* 글자색 */
+    margin-top: 0; /* 위쪽 마진 제거 */
+    padding-left: 8px;
+}
+
+/* 프로젝트 찾기 제목 아래 선 (hr) */
+.section-divider {
+    border: none; /* 기본 테두리 제거 */
+    border-top: 1px solid #eee; /* 얇은 회색 선 */
+    margin-bottom: 20px; /* 선과 검색창 사이 간격 */
+    
+    width: 100%; /* 부모(search-section)의 100% 너비 */
+    margin-left: 0; /* 좌측 마진을 0으로 초기화 */
+    margin-right: 0; /* 우측 마진을 0으로 초기화 */
+}
+
+/* 검색창 컨테이너 */
+.search-bar-container.full-width-search {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    position: relative; /* 아이콘 위치 지정을 위한 기준점 */
+    margin-bottom: 20px; /* 검색창과 필터/버튼 줄 사이 간격 */
+    background-color: white; /* 배경색 흰색 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    border: 1px solid #ddd; /* 테두리 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+    
+    width: 100%; /* 부모(search-section)의 100% 너비 */
+    margin-left: 0; /* 좌측 마진을 0으로 초기화 */
+    margin-right: 0; /* 우측 마진을 0으로 초기화 */
+    max-width: none;
+}
+
+.search-input {
+    flex-grow: 1; /* 남은 공간을 모두 차지 */
+    padding: 14px 16px; /* 상하 14px, 좌우 16px 패딩 */
+    padding-right: 40px; /* 아이콘 공간 확보 */
+    font-size: 16px; /* 폰트 크기 */
+    border: none; /* 테두리 제거 */
+    outline: none; /* 포커스 시 외곽선 제거 */
+    height: 48px; /* 높이 고정 */
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+}
+
+.input-search-icon {
+    position: absolute; /* 절대 위치 지정 */
+    right: 15px; /* 오른쪽에서 15px 떨어뜨림 */
+    height: 20px; /* 아이콘 높이 */
+    width: 20px; /* 아이콘 너비 */
+    cursor: pointer; /* 마우스 오버 시 포인터 변경 */
+    z-index: 2; /* input 위에 오도록 */
+}
+
+/* 필터 버튼과 모집 시작하기 버튼이 한 줄에 배치될 컨테이너 */
+.filter-and-add-buttons-row {
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    flex-wrap: wrap; /* 내용이 넘칠 경우 줄바꿈 */
+    gap: 10px; /* 요소들 사이의 기본 간격 */
+    
+    /* ----- 수정된 부분: 아래 프로젝트 카드와의 간격 줄이기 ----- */
+    margin-bottom: 5px; /* 30px에서 15px로 줄여 간격 감소 */
+
+    /* ----- 수정된 부분: 필터 버튼을 오른쪽으로 조금 보내고, 다른 요소들과 시작점 맞추기 ----- */
+    padding-left: 10px; /* 좌측 패딩을 40px 부여하여 시작점 맞춤 */
+    width: calc(100% - 10px); /* 전체 너비에서 왼쪽 패딩만큼 감소 */
+    margin-left: 0; /* 마진 초기화 */
+    margin-right: 0; /* 마진 초기화 */
+    max-width: none;
+}
+
+.filter-buttons {
+    display: flex; /* Flexbox 사용 */
+    gap: 8px; /* 버튼 사이 간격 */
+    flex-wrap: wrap; /* 버튼이 넘칠 경우 줄바꿈 */
+    margin-right: auto; /* 남은 공간을 밀어내어 왼쪽으로 붙임 */
+}
+
+.filter-btn {
+    background-color: white; /* 배경색 흰색 */
+    color: #555; /* 글자색 */
+    border: 1px solid #ddd; /* 테두리 */
+    padding: 10px 18px; /* 상하 10px, 좌우 18px 패딩 */
+    border-radius: 20px; /* 모서리 둥글게 (알약 형태) */
+    cursor: pointer; /* 마우스 오버 시 포인터 변경 */
+    font-size: 14px; /* 폰트 크기 */
+    font-weight: 500; /* 폰트 굵기 */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; /* 호버 시 애니메이션 */
+}
+
+.filter-btn:hover {
+    background-color: #e6f2ff; /* 호버 시 연한 파란색 배경 */
+    border-color: #007bff; /* 호버 시 파란색 테두리 */
+    color: #007bff; /* 호버 시 파란색 글자 */
+}
+
+.filter-btn.active {
+    background-color: #007bff; /* 활성화 시 파란색 배경 */
+    color: white; /* 활성화 시 흰색 글자 */
+    border-color: #007bff; /* 활성화 시 파란색 테두리 */
+}
+
+.filter-btn.active:hover {
+    background-color: #0056b3; /* 활성화 및 호버 시 더 진한 파란색 배경 */
+    border-color: #0056b3; /* 활성화 및 호버 시 더 진한 파란색 테두리 */
+}
+
+.add-project-btn {
+    background-color: #007bff; /* 배경색 파란색 */
+    color: white; /* 글자색 흰색 */
+    border: none; /* 테두리 제거 */
+    padding: 10px 18px; /* 상하 10px, 좌우 18px 패딩 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 오버 시 포인터 변경 */
+    font-size: 14px; /* 폰트 크기 */
+    font-weight: 500; /* 폰트 굵기 */
+    transition: background-color 0.2s ease; /* 호버 시 애니메이션 */
+    margin-left: auto; /* 남은 공간을 밀어내어 오른쪽으로 붙임 */
+}
+
+.add-project-btn:hover {
+    background-color: #0056b3; /* 호버 시 더 진한 파란색 */
+}
+
+
+/* 프로젝트 리스트 섹션 */
+.project-list-section {
+    margin: 30px 40px; /* 상하 30px, 좌우 40px 마진 */
+    max-width: 1400px; /* 최대 너비 제한 */
+    margin-left: auto; /* 좌우 자동 마진으로 중앙 정렬 */
+    margin-right: auto;
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+}
+
+/* 프로젝트 카드 컨테이너 */
+.project-cards {
+    display: grid; /* Grid Layout 사용 */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 최소 300px, 남은 공간 균등 분배 */
+    gap: 16px; /* 그리드 항목 사이 간격 */
+    padding-bottom: 10px; /* 하단 패딩 */
+    -ms-overflow-style: none; /* IE 스크롤바 숨김 */
+    scrollbar-width: none; /* Firefox 스크롤바 숨김 */
+}
+.project-cards::-webkit-scrollbar {
+    display: none; /* Chrome, Safari 스크롤바 숨김 */
+}
+
+
+/* 개별 프로젝트 카드 */
+.card {
+    background-color: white; /* 배경색 흰색 */
+    padding: 20px; /* 내부 패딩 */
+    border-radius: 12px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* 그림자 효과 */
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+}
+
+.card-header {
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-bottom: 8px; /* 아래 간격 */
+}
+
+.card-header h3 {
+    font-size: 18px; /* 제목 폰트 크기 */
+    margin: 0; /* 마진 제거 */
+    color: #333; /* 글자색 */
+}
+.badge {
+    font-size: 12px; /* 배지 폰트 크기 */
+    padding: 4px 10px; /* 배지 패딩 */
+    border-radius: 12px; /* 배지 모서리 둥글게 */
+    font-weight: 500; /* 배지 폰트 굵기 */
+}
+.badge.green {
+    background-color: #e6f8ed; /* 초록색 배지 배경 */
+    color: #32a64a; /* 초록색 배지 글자 */
+}
+.badge.gray {
+    background-color: #eee; /* 회색 배지 배경 */
+    color: #888; /* 회색 배지 글자 */
+}
+
+.tags {
+    margin-bottom: 12px; /* 아래 간격 */
+}
+.tags span {
+    display: inline-block; /* 인라인 블록 요소 */
+    font-size: 13px; /* 폰트 크기 */
+    color: #777; /* 글자색 */
+    padding: 0; /* 패딩 제거 */
+    margin-right: 8px; /* 오른쪽 간격 */
+}
+
+.stacks {
+    margin-bottom: 16px; /* 아래 간격 */
+}
+.stacks span {
+    display: inline-block; /* 인라인 블록 요소 */
+    font-size: 12px; /* 폰트 크기 */
+    margin: 0 4px 4px 0; /* 마진 (상하 0, 좌우 4px) */
+    background-color: #eef2f7; /* 배경색 */
+    color: #334; /* 글자색 */
+    padding: 4px 8px; /* 패딩 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    font-weight: 500; /* 폰트 굵기 */
+}
+
+.progress {
+    margin-top: 12px; /* 위쪽 간격 */
+    font-size: 14px; /* 폰트 크기 */
+    color: #555; /* 글자색 */
+    margin-bottom: 16px; /* 아래 간격 */
+}
+.progress strong {
+    font-weight: 700; /* 폰트 굵기 */
+    color: #000; /* 글자색 검정 */
+}
+
+.more-link {
+    display: block; /* 블록 요소 */
+    margin-top: 10px; /* 위쪽 간격 */
+    font-weight: bold; /* 폰트 굵기 */
+    color: #2166f2; /* 글자색 파란색 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.2s ease, text-decoration 0.2s ease; /* 호버 시 애니메이션 */
+    font-size: 14px; /* 폰트 크기 */
+}
+
+.more-link:hover {
+    color: #154dc2; /* 호버 시 더 진한 파란색 */
+    text-decoration: underline; /* 호버 시 밑줄 */
+}
+
+/* 반응형을 위한 미디어 쿼리 */
+@media (max-width: 900px) { /* 화면 너비 900px 이하일 때 적용 */
+    .navbar, .search-section, .project-list-section {
+        padding: 15px 20px; /* 상하 15px, 좌우 20px 패딩으로 조정 */
+    }
+
+    .nav-links {
+        display: none; /* 작은 화면에서 네비게이션 링크 숨김 */
+    }
+
+    .nav-right {
+        margin-left: auto; /* 오른쪽 정렬 */
+    }
+
+    /* 필터와 버튼이 세로로 쌓이도록 */
+    .filter-and-add-buttons-row {
+        flex-direction: column; /* 세로 방향으로 정렬 */
+        align-items: flex-start; /* 시작점에 정렬 (왼쪽) */
+        gap: 15px; /* 요소들 사이 세로 간격 조정 */
+        /* 모바일에서는 꽉 채우기 위해 max-width 해제 */
+        width: 100%; /* 너비 100% */
+        padding-left: 0; /* 모바일에서는 패딩 초기화 */
+    }
+
+    .filter-buttons {
+        width: 100%; /* 필터 버튼 그룹이 전체 너비 차지 */
+        justify-content: flex-start; /* 버튼들 왼쪽 정렬 */
+    }
+
+    .add-project-btn {
+        width: 100%; /* 모집 시작하기 버튼도 전체 너비 차지 */
+        margin-left: 0; /* 마진 초기화 */
+    }
+
+    .search-bar-container.full-width-search {
+        width: 100%; /* 너비 100% */
+        margin-left: 0; /* 모바일에서는 마진 초기화 */
+        margin-right: 0;
+    }
+
+    .search-input {
+        padding-right: 30px; /* 검색 아이콘 공간 확보 */
+    }
+
+    .input-search-icon {
+        right: 10px; /* 아이콘 위치 조정 */
+    }
+
+    .project-cards {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 카드 너비 조정 */
+    }
+
+    .search-section h1 {
+        padding: 0 0; /* 모바일에서는 제목 패딩 제거 */
+    }
+
+    .section-divider {
+        width: 100%; /* 모바일에서는 너비 100% */
+        margin-left: 0; /* 모바일에서는 마진 초기화 */
+        margin-right: 0;
+    }
+}
