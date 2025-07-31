@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>학생 프로필 편집</title>
+    <link rel="stylesheet" href="profil-edit.css">
+    <link rel="stylesheet" href="common.css"> </head>
+<body>
+
+<header class="navbar">
+    <div class="nav-left">
+        <img src="Group 14 copy 3.png" alt="Teaming Icon" class="nav-logo">
+        <span class="nav-title">Teaming</span>
+    </div>
+    <div class="nav-right">
+        <nav class="nav-links">
+            <a href="../Main.LogIn/main.html">홈</a>
+            <span>|</span>
+            <a href="#">프로젝트</a>
+            <span>|</span>
+            <a href="#">학생 프로필</a>
+        </nav>
+        <a href="../SignIn/signin.html" class="user-icon-link">
+            <img src="user copy 2.svg" alt="사용자 아이콘" class="user-icon">
+        </a>
+    </div>
+</header>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-image-container">
+            <img src="user copy 2.svg" alt="프로필 이미지" class="profile-image">
+            <button class="edit-profile-image-btn">
+                <img src="camera-icon.svg" alt="카메라 아이콘">
+            </button>
+        </div>
+        <div class="profile-info-header">
+            <h2 class="profile-name">박준석</h2>
+            <p class="profile-grade">1학년 1반 10번</p>
+        </div>
+        <button class="edit-button">프로필 편집</button>
+    </div>
+
+    <div class="profile-content">
+        <div class="info-section basic-info">
+            <h3>기본 정보</h3>
+            <div class="info-item">
+                <label for="name">이름</label>
+                <input type="text" id="name" value="박준석">
+            </div>
+            <div class="info-item">
+                <label for="email">이메일</label>
+                <input type="email" id="email" value="dgsw.1110@dgsw.hs.kr">
+            </div>
+            <div class="info-item">
+                <label for="user-id">ID</label>
+                <input type="text" id="user-id" value="BBHHIDD" readonly>
+            </div>
+            <div class="info-item-row">
+                <div class="info-item grade-class">
+                    <label for="grade">학년</label>
+                    <select id="grade">
+                        <option value="1" selected>1학년</option>
+                        <option value="2">2학년</option>
+                        <option value="3">3학년</option>
+                    </select>
+                </div>
+                <div class="info-item grade-class">
+                    <label for="class-num">반</label>
+                    <input type="number" id="class-num" value="1" min="1" max="10">
+                </div>
+                <div class="info-item grade-class">
+                    <label for="student-num">번호</label>
+                    <input type="number" id="student-num" value="10" min="1" max="20">
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section self-intro">
+            <h3>자기소개</h3>
+            <textarea id="self-introduction">
+저는 Teaming 프로젝트에서 백엔드 역할을 담당하여 로그인/회원가입 기능과 검색 기능을 구현하며 약 50%의 기여도를 쌓았습니다.
+또한 SpringBoot와 MySQL을 주로 사용하여 데이터베이스 설계와 API 개발 경험이 있습니다.
+
+그리고 저는 바인드 동아리에서 "도담도담"이라는 앱을 통해 한 앱을 꾸준히 유지하는 과정을 겪었습니다.
+
+다양한 프로젝트로 협업 경험을 꾸준히 익힌 개발 경험이 많이 쌓였습니다.
+            </textarea>
+        </div>
+
+        <div class="info-section skills-section">
+            <h3>사용 가능 언어</h3>
+            <div id="skills-list" class="skills-list">
+                <div class="skill-item">
+                    <span>Html / Css</span>
+                    <button class="delete-skill-btn">
+                        <img src="delete-icon.svg" alt="삭제 아이콘">
+                    </button>
+                </div>
+                <div class="skill-item">
+                    <span>Python</span>
+                    <button class="delete-skill-btn">
+                        <img src="delete-icon.svg" alt="삭제 아이콘">
+                    </button>
+                </div>
+                <div class="skill-item">
+                    <span>Java</span>
+                    <button class="delete-skill-btn">
+                        <img src="delete-icon.svg" alt="삭제 아이콘">
+                    </button>
+                </div>
+                <div class="skill-item">
+                    <span>Spring Boot</span>
+                    <button class="delete-skill-btn">
+                        <img src="delete-icon.svg" alt="삭제 아이콘">
+                    </button>
+                </div>
+                <div class="skill-item">
+                    <span>Kotlin</span>
+                    <button class="delete-skill-btn">
+                        <img src="delete-icon.svg" alt="삭제 아이콘">
+                    </button>
+                </div>
+            </div>
+            <div class="add-skill-input">
+                <input type="text" id="new-skill-input" placeholder="새로운 언어 추가">
+                <button id="add-skill-btn">+ 언어 추가</button>
+            </div>
+        </div>
+
+        <div class="info-section projects-section">
+            <h3>현재 참여 중인 프로젝트</h3>
+            <ul id="participating-projects-list">
+                <li>Teaming</li>
+                <li>로그인 / 회원가입 전용 프로젝트</li>
+                <li>세계모든 언어 배우기 프로젝트</li>
+            </ul>
+        </div>
+    </div>
+    <div class="save-button-container">
+        <button class="save-profile-btn">저장하기</button>
+    </div>
+</div>
+
+<script src="profile-edit.js"></script>
+</body>
+</html>
